@@ -57,10 +57,14 @@ class SetupRound(WaitPage):
 
 
 class Decision(Page):
-    pass
+    form_model = "player"
+
+    @staticmethod
+    def get_form_fields(player):
+        return["tickets_purchased"]
 
 
-class WaitForDecisions(Page):
+class WaitForDecisions(WaitPage):
     pass
 
 
